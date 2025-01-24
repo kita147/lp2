@@ -1,0 +1,358 @@
+@charset "UTF-8";
+
+/* フォントの導入 -----------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* コンテンツ幅以下可変レイアウト -----------------------------------------*/
+html {
+    font-size: calc(10 * 100vw / 390);
+    /* 390はSPデザインカンプの幅 */
+}
+
+@media (min-width:768px) {
+    html {
+        font-size: calc(10 * 100vw / 1200);
+        /* 1200はPCカンプのコンテンツ幅 */
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+/* スムーススクロール -----------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* 変数 -----------------------------------------*/
+:root {
+    --common-max-size: 39rem;
+    --common-lr-pad: 1.6rem;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --common-max-size: 120rem;
+        --common-lr-pad: 2rem;
+    }
+}
+
+/* 全体的な設定 -----------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.75;
+    background-color: #fff;
+    color: #000;
+}
+
+span,
+th,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* 共通クラス -----------------------------------------*/
+.common__container {
+    max-width: 39rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+@media (min-width: 768px) {
+    .common__container {
+        max-width: 120rem;
+        padding: 0 10rem;
+    }
+}
+
+.common__sp {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .common__sp {
+        display: none;
+    }
+}
+
+/* 色の共通クラス -----------------------------------------*/
+.bg-color__cyan {
+    background-color: #46C4DB;
+}
+
+.bg-color__light-green {
+    background-color: #5DD5AB;
+}
+
+/* フォント共通クラス（デフォルトはNoto-Serif-JP-Regular400です） -----------------------------------------*/
+.font__noto-serif-jp--medium {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.font__noto-serif-jp--semi-bold {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.font__marcellus--regular {
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.font__eb-garamond--regular {
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ヘッダーここから -----------------------------------------*/
+.header {
+    width: 100%;
+    height: 45rem;
+    background-image: url(/assets/image/main_visual_sp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 15.7rem;
+}
+
+@media (min-width:768px) {
+    .header {
+        height: 72rem;
+        background-image: url(/assets/image/main_visual_pc.jpg);
+        margin-bottom: 4.8rem;
+    }
+}
+
+.header__container {
+    max-width: 39rem;
+    margin: 0 auto;
+    padding: 2.4rem 2.3rem;
+}
+
+@media (min-width:768px) {
+    .header__container {
+        max-width: 150rem;
+        padding: 3.2rem 22.3rem;
+    }
+}
+
+.header__fxbox--logo {
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo {
+    width: 14.3rem;
+}
+
+@media (min-width:768px) {
+    .header__logo {
+        display: block;
+        width: 16.6rem;
+        margin-left: 1.6rem;
+    }
+}
+
+.header__fxbox--title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 36.4rem;
+}
+
+@media (min-width:768px) {
+    .header__fxbox--title {
+        margin-top: 20.3rem;
+    }
+}
+
+.header__title-main {
+    font-size: 4.1rem;
+    letter-spacing: 0.3em;
+    line-height: 1.244;
+}
+
+@media (min-width:768px) {
+    .header__title-main {
+        font-size: 5rem;
+        line-height: 1.36;
+    }
+}
+
+.header__title-sub {
+    font-size: 2rem;
+    letter-spacing: 0.3em;
+    margin-top: 0.5rem;
+}
+
+@media (min-width:768px) {
+    .header__title-sub {
+        font-size: 2.5rem;
+        margin-top: 0.4rem;
+    }
+}
+
+/* ヘッダーここまで -----------------------------------------*/
+
+
+/* 価格とボタン2個（共用）ここからここから -----------------------------------------*/
+.price {
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .price {
+        margin-bottom: 4.8rem;
+    }
+
+}
+
+.price__fxbox {
+    width: 100%;
+    margin-bottom: 5rem;
+    padding: 2rem 0 3.4rem;
+    /* 左右のpaddingはflexboxでセンター合わせの為不要 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F0F4FF;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .price__fxbox {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem 4.8rem;
+        text-align: left;
+    }
+}
+
+.price__title--main {
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+    line-height: 1.4444;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .price__title--main {
+        font-size: 2.4rem;
+        line-height: 1.4583;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.price__title--sub {
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    line-height: 1.4285;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .price__title--sub {
+        font-size: 1.6rem;
+        line-height: 1.4375;
+        margin-bottom: 0;
+    }
+
+}
+
+.price__fxbox--btn {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .price__fxbox--btn {
+        flex-direction: row;
+        row-gap: 0;
+        column-gap: 3.2rem;
+    }
+}
+
+.price__btn {
+    display: inline-block;
+    width: 30rem;
+    height: 5.8rem;
+    line-height: 5.8rem;
+    /* 垂直に中央揃えする為にheightと同値にする */
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 3.4rem;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    /*margin-top: 0.7rem;*/
+}
+
+@media (min-width: 768px) {
+    .price__btn {
+        margin-top: 0;
+    }
+}
+
+/* ボタンのホバー効果 */
+.price__btn:hover {
+    opacity: 0.8;
+}
+
+/* 共通インフォメーションここまで -----------------------------------------*/
+
+
+
+/* フッターここから------------------------------------*/
+
+
+/* フッターここまで------------------------------------*/
