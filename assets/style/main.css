@@ -154,6 +154,18 @@ a {
     font-style: normal;
 }
 
+.font__eb-garamond--semi-bold {
+    font-family: "EB Garamond", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.font__eb-garamond--bold {
+    font-family: "EB Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
 /* ヘッダーここから -----------------------------------------*/
 .header {
     width: 100%;
@@ -243,7 +255,7 @@ a {
 /* ヘッダーここまで -----------------------------------------*/
 
 
-/* 価格とボタン2個（共用）ここからここから -----------------------------------------*/
+/* 価格とボタン2個（共用）ここから -----------------------------------------*/
 .price {
     margin-bottom: 5rem;
 }
@@ -348,8 +360,80 @@ a {
     opacity: 0.8;
 }
 
-/* 共通インフォメーションここまで -----------------------------------------*/
+/* お肌を美しく保つここから -----------------------------------------*/
+.beautiful-skin {
+    width: 100%;
+    height: 68rem;
+    background-image: url(/assets/image/photo_keep_sp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 5rem;
+}
 
+@media (min-width: 768px) {
+    .beautiful-skin {
+        height: 55rem;
+        background-image: url(/assets/image/photo_keep_pc.jpg);
+        margin-bottom: 8rem;
+    }
+}
+
+.beautiful-skin__container {
+    max-width: 39rem;
+    margin: 0 auto;
+    padding: 4.2rem 1.6rem;
+
+}
+
+@media (min-width: 768px) {
+    .beautiful-skin__container {
+        max-width: 120rem;
+        padding: 12.7rem 10rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.beautiful-skin__group {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .beautiful-skin__group {
+        width: 42.3rem;
+        text-align: left;
+    }
+}
+
+.beautiful-skin__titile--en {
+    font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+    .beautiful-skin__titile--en {
+        font-size: 3.8rem;
+    }
+}
+
+.beautiful-skin__titile--jp {
+    font-size: 2.4rem;
+    margin-bottom: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .beautiful-skin__titile--jp {
+        margin-bottom: 2.4rem;
+    }
+
+}
+
+.beautiful-skin__text {
+    font-size: 1.4rem;
+    line-height: 2.28;
+    text-align: left;
+}
 
 
 /* フッターここから------------------------------------*/
