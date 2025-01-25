@@ -31,14 +31,14 @@ html {
 
 /* 変数 -----------------------------------------*/
 :root {
-    --common-max-size: 39rem;
-    --common-lr-pad: 1.6rem;
+    --voice-card-width: 2.8rem;
+    --swiper-theme-color: #00AFBF;
+    --swiper-pagination-bullet-size: 9px;
 }
 
 @media (min-width: 768px) {
     :root {
-        --common-max-size: 120rem;
-        --common-lr-pad: 2rem;
+        --voice-card-width: 3rem;
     }
 }
 
@@ -108,6 +108,40 @@ a {
     }
 }
 
+
+.common__title--en {
+    font-family: "EB Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-bottom: 0.6rem;
+}
+
+@media (min-width: 768px) {
+    .common__title--en {
+        font-size: 4.5rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.common__title--jp {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 3.6rem;
+}
+
+@media (min-width: 768px) {
+    .common__title--jp {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+}
+
 .common__sp {
     display: block;
 }
@@ -147,10 +181,15 @@ a {
     font-style: normal;
 }
 
-
 .font__eb-garamond--regular {
     font-family: "EB Garamond", serif;
     font-weight: 400;
+    font-style: normal;
+}
+
+.font__eb-garamond--medium {
+    font-family: "EB Garamond", serif;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -367,7 +406,7 @@ a {
     background-image: url(/assets/image/photo_keep_sp.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    margin-bottom: 5rem;
+    margin-bottom: 5.5rem;
 }
 
 @media (min-width: 768px) {
@@ -434,6 +473,189 @@ a {
     text-align: left;
 }
 
+/* お客様の声ここから -----------------------------------------*/
+.voice {
+    margin-bottom: 5rem;
+    text-align: center;
+    position: relative;
+    /* スライダーのモジュールを外に出す */
+    height: 50rem;
+    /* 制作中のため、高さ入れて置く */
+}
+
+@media (min-width: 768px) {
+    .voice {
+        margin-bottom: 8rem;
+    }
+}
+
+
+/* スライダーの設定ここから --------------------*/
+.voice__slider {
+    /*スライダーの幅と高さを調整*/
+    width: 100%;
+    height: 40.8rem;
+}
+
+.swiper-slide {
+    max-width: 28rem;
+    margin: 0 auto;
+    display: flex;
+    padding: 2.8rem 1.5rem;
+    background-color: #DBF7F9;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-button-lock,
+.swiper-pagination-lock {
+    display: block;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    width: 3.2rem;
+    height: 3.2rem;
+    background-image: url(../image/circle_arrow_right.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.swiper-pagination {
+    bottom: -40px;
+}
+
+/* スライダーの設定ここまで --------------------*/
+
+.voice__fxbox--card {
+    width: var(--voice-card-width);
+    display: flex;
+    padding: 2.8rem 1.5rem;
+    background-color: #DBF7F9;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .voice__fxbox--card {
+        padding: 4rem 1.6rem;
+    }
+}
+
+.voice__picture {
+    width: 8rem;
+    height: 8rem;
+}
+
+@media (min-width: 768px) {
+    .voice__picture {
+        width: 10rem;
+    }
+}
+
+.voice__name {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .voice__name {
+        font-size: 1.5rem;
+        margin-bottom: 1.6rem;
+    }
+}
+
+.voice__text {
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .voice__text {
+        font-size: 1.6rem;
+    }
+}
+
+/* 質問ここから -----------------------------------------*/
+.question {
+    margin-bottom: 5rem;
+    text-align: center;
+    background: linear-gradient(to right, #F4FFE8, #C6F0FE);
+}
+
+.question__container {
+    max-width: 39rem;
+    margin: 0 auto;
+    padding: 4.2rem 1.6rem;
+}
+
+/* アコーディオンの設定ここから */
+.accordion {
+    width: 100%;
+    background-color: #fff
+}
+
+.accordion__group {
+    text-align: left;
+}
+
+.accordion__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 1.6rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    font-family: "EB Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.6rem;
+    margin-right: 1.2rem;
+    line-height: 1.86666;
+}
+
+.text {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.86666;
+}
+
+.toggle-icon {
+    width: 1.16rem;
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.accordion__answer--fxbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 1.6rem 3.3rem;
+}
+
+.accordion__answer {
+    display: none;
+}
+
+
+/* 質問ここまで -----------------------------------------*/
 
 /* フッターここから------------------------------------*/
 
