@@ -210,7 +210,6 @@ a {
     .header__logo {
         display: block;
         width: 16.6rem;
-        margin-left: 1.6rem;
     }
 }
 
@@ -283,6 +282,7 @@ a {
     .price__fxbox {
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: 4.7rem;
         padding: 4rem 4.8rem;
         text-align: left;
     }
@@ -388,21 +388,20 @@ a {
 @media (min-width: 768px) {
     .beautiful-skin__container {
         max-width: 120rem;
-        padding: 12.7rem 10rem;
+        padding: 11.8rem 10rem;
         display: flex;
         justify-content: flex-end;
     }
 }
 
 .beautiful-skin__group {
-    width: 100%;
     text-align: center;
     color: #fff;
 }
 
 @media (min-width: 768px) {
     .beautiful-skin__group {
-        width: 42.3rem;
+        width: 42.1rem;
         text-align: left;
     }
 }
@@ -424,7 +423,7 @@ a {
 
 @media (min-width: 768px) {
     .beautiful-skin__titile--jp {
-        margin-bottom: 2.4rem;
+        margin-bottom: 1.2rem;
     }
 
 }
