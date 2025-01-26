@@ -33,11 +33,11 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".accordion__question").on("click", function () {
     const $answer = $(this).next(".accordion__answer");
-    const $toggle = $(this).find(".toggle-btn");
+    const $toggle = $(this).find(".accordion__toggle-btn");
 
     // Close other answers
     $(".accordion__answer").not($answer).slideUp();
-    $(".toggle-btn").not($toggle).removeClass("active");
+    $(".accordion__toggle-btn").not($toggle).removeClass("active");
 
     // Toggle the clicked answer
     $answer.slideToggle();
