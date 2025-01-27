@@ -213,6 +213,7 @@ a {
     background-image: url(/assets/image/main_visual_sp.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     margin-bottom: 15.7rem;
 }
 
@@ -407,6 +408,7 @@ a {
     background-image: url(/assets/image/photo_keep_sp.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     margin-bottom: 5.5rem;
 }
 
@@ -500,7 +502,7 @@ a {
 }
 
 .swiper-slide {
-    max-width: 28rem;
+    /*max-width: 28rem;*/
     margin: 0 auto;
     display: flex;
     padding: 2.8rem 1.5rem;
