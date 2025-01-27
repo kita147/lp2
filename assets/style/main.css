@@ -846,54 +846,37 @@ a {
     }
 }
 
-
 /* フッターここまで------------------------------------*/
 
 /* TOPへ戻るここから------------------------------------*/
-#btn__back-to-top {
-    visibility: hidden;
-}
-
-#btn__back-to-top.show {
-    opacity: 1;
-    visibility: visible;
-}
-
 .btn__back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     bottom: 2rem;
     right: 1.6rem;
     width: 4rem;
     height: 4rem;
-    background-color: transparent;
-    /* 背景色を透明 */
-    background-size: cover;
+    color: #fff;
+    background-color: #0071CE;
     cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
 }
 
-.btn__back-to-top::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../image/btn_arrow_up.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: opacity 0.2s ease;
-    opacity: 1;
+.btn__back-to-top:hover {
+    color: #0071CE;
+    background-color: #fff;
+    border: 2px solid #0071CE;
 }
 
-.btn__back-to-top:hover::before {
-    background-image: url(../image/btn_arrow_up_hover.svg);
-    opacity: 0.8;
-    /* 透明度を追加 */
+.icon-middle {
+    font-size: 3rem;
+    line-height: 1;
+    /* アイコンの上下余白をリセット */
+    display: inline-block;
+    vertical-align: middle;
 }
-
-
 
 
 /* TOPへ戻るここまで------------------------------------*/

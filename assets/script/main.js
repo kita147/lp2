@@ -60,17 +60,19 @@ $(document).ready(function () {
 });
 
 ////////// ページトップに戻るボタン //////////
-$(document).ready(function () {
-  var pagetop = $("#btn__back-to-top");
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      pagetop.fadeIn();
+$(function () {
+  $(window).on("scroll", function () {
+    scrollHeight = $(document).height();
+    scrollPosition = $(window).height() + $(window).scrollTop();
+    footHeight = $(".footer").innerHeight();
+    if (scrollHeight - scrollPosition <= footHeight) {
+      $(".btn__back-to-top").css({
+        position: "absolute",
+      });
     } else {
-      pagetop.fadeOut();
+      $(".btn__back-to-top").css({
+        position: "fixed",
+      });
     }
-  });
-  pagetop.click(function () {
-    $("body, html").animate({ scrollTop: 0 }, 500);
-    return false;
   });
 });
