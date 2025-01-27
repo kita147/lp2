@@ -716,8 +716,17 @@ a {
 
 .footer__container {
     max-width: 39rem;
+    height: 16.5rem;
     margin: 0 auto;
     padding: 2.4rem 2.9rem;
+}
+
+@media (min-width: 768px) {
+    .footer__container {
+        max-width: 120rem;
+        height: 10.4rem;
+        padding: 4rem 3.2rem;
+    }
 }
 
 .footer__fxbox {
@@ -728,8 +737,23 @@ a {
     row-gap: 2.9rem;
 }
 
+@media (min-width: 768px) {
+    .footer__fxbox {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 3.2rem;
+    }
+}
+
 .footer__logo {
     width: 16.254rem;
+}
+
+@media (min-width: 768px) {
+    .footer__logo {
+        width: 19rem;
+    }
 }
 
 .footer__navi {
@@ -738,18 +762,34 @@ a {
     column-gap: 3rem;
 }
 
+@media (min-width: 768px) {
+    .footer__navi {
+        justify-content: flex-start;
+        column-gap: 3.2rem;
+    }
+}
+
 .footer__navi-item {
     font-size: 1.2rem;
     cursor: pointer;
 }
 
+@media (min-width: 768px) {
+    .footer__navi-item {
+        font-size: 1.4rem;
+    }
+}
+
 .footer__copy {
     display: block;
     font-size: 1.1rem;
-    text-align: center;
-    margin-top: 2.2rem;
 }
 
+@media (min-width: 768px) {
+    .footer__copy {
+        font-size: 1.2rem;
+    }
+}
 
 
 /* フッターここまで------------------------------------*/
