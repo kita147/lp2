@@ -1,12 +1,26 @@
 /* globals $ */
 
-////////// スライダーの設定 //////////
+////////// swiperの設定 //////////
 const swiper = new Swiper(".swiper", {
   loop: true,
+
+  // Default parameters SP版の時
+  slidesPerView: 1,
+  spaceBetween: 10,
+
+  // Responsive breakpoints PC版の時
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+
   navigation: {
     nextEl: ".swiper-button-next", //必須
     prevEl: ".swiper-button-prev", //必須
   },
+
   pagination: {
     el: ".swiper-pagination", //必須
     type: "bullets",
