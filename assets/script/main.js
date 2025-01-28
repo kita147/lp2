@@ -60,19 +60,22 @@ $(document).ready(function () {
 });
 
 ////////// ページトップに戻るボタン //////////
-$(function () {
+$(document).ready(function () {
+  const $backToTop = $(".btn__back-to-top");
+
+  // スクロール位置で表示制御
   $(window).on("scroll", function () {
-    scrollHeight = $(document).height();
-    scrollPosition = $(window).height() + $(window).scrollTop();
-    footHeight = $(".footer").innerHeight();
-    if (scrollHeight - scrollPosition <= footHeight) {
-      $(".btn__back-to-top").css({
-        position: "absolute",
-      });
+    if ($(this).scrollTop() > 200) {
+      // 200pxスクロールしたら
+      $backToTop.addClass("show"); // 表示
     } else {
-      $(".btn__back-to-top").css({
-        position: "fixed",
-      });
+      $backToTop.removeClass("show"); // 非表示
     }
+  });
+
+  // ボタンをクリックしてトップに戻る
+  $backToTop.on("click", function () {
+    // デフォルトのリンク動作を維持し、CSSの scroll-behavior を利用
+    window.scrollTo({ top: 0, behavior: "smooth" }); // 明示的にスクロールする
   });
 });

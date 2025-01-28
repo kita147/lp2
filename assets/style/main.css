@@ -861,7 +861,12 @@ a {
     color: #fff;
     background-color: #0071CE;
     cursor: pointer;
-    transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.5s ease, background-color 0.5s ease, border 0.2s ease;
+}
+
+.btn__back-to-top.show {
+    opacity: 1;
 }
 
 .btn__back-to-top:hover {
