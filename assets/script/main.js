@@ -4,11 +4,11 @@
 const swiper = new Swiper(".swiper", {
   loop: true,
 
-  // Default parameters SP版の時
+  // スライド数の設定
   slidesPerView: 1,
   spaceBetween: 10,
 
-  // Responsive breakpoints PC版の時
+  // ブレークポイントの設定とPC版のスライド数の設
   breakpoints: {
     768: {
       slidesPerView: 3,
@@ -16,13 +16,15 @@ const swiper = new Swiper(".swiper", {
     },
   },
 
+  // ナビゲーションボタンの設定
   navigation: {
-    nextEl: ".swiper-button-next", //必須
-    prevEl: ".swiper-button-prev", //必須
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
+  // ページネーションの設定
   pagination: {
-    el: ".swiper-pagination", //必須
+    el: ".swiper-pagination",
     type: "bullets",
   },
 });
@@ -62,20 +64,33 @@ $(document).ready(function () {
 ////////// ページトップに戻るボタン //////////
 $(document).ready(function () {
   const $backToTop = $(".btn__back-to-top");
+  const $footer = $(".footer");
+  const defaultBottom = 20;
 
-  // スクロール位置で表示制御
+  // スクロール位置で表示制御とフッター調整
   $(window).on("scroll", function () {
-    if ($(this).scrollTop() > 200) {
-      // 200pxスクロールしたら
-      $backToTop.addClass("show"); // 表示
+    const scrollTop = $(this).scrollTop();
+    const footerTop = $footer.offset().top;
+    const windowHeight = $(window).height();
+
+    // ボタンの表示と非表示
+    if (scrollTop > 200) {
+      $backToTop.addClass("show");
     } else {
-      $backToTop.removeClass("show"); // 非表示
+      $backToTop.removeClass("show");
+    }
+
+    // フッターに近づいた場合の位置調整
+    const overlap = scrollTop + windowHeight - footerTop;
+    if (overlap > 0) {
+      $backToTop.css({ bottom: overlap + "px" });
+    } else {
+      $backToTop.css({ bottom: defaultBottom + "px" });
     }
   });
 
   // ボタンをクリックしてトップに戻る
   $backToTop.on("click", function () {
-    // デフォルトのリンク動作を維持し、CSSの scroll-behavior を利用
-    window.scrollTo({ top: 0, behavior: "smooth" }); // 明示的にスクロールする
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
