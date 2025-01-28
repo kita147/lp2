@@ -14,9 +14,6 @@
         <meta property="og:url" content="https://example.com">
         <meta property="og:site_name" content="Kira-meki">
 
-        <!-- cssリセットの読み込み -->
-        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-
         <!-- swiperのCSS -->
         <link
             rel="stylesheet"
@@ -26,6 +23,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
+        <!-- cssリセットの読み込み -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 
         <!-- スタイルシートの読み込み -->
         <link rel="stylesheet" href="/assets/style/main.css">
@@ -99,13 +98,14 @@
                     <h2 class="common__title--en">Voices</h2>
                     <h2 class="common__title--jp">お客様の声</h2>
 
+                    <!-- スライダーここから -->
                     <div class="swiper__container">
-                        <div class="swiper voice__slider">
+                        <div class="swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <picture>
-                                        <source class="voice__picture" srcset="/assets/image/face_a_pc.png" media="(min-width:768px)">
-                                        <img class="voice__picture" src="/assets/image/face_a_sp.png" alt="お客様の声Aさん">
+                                    <picture class="voice__picture">
+                                        <source srcset="/assets/image/face_a_pc.png" media="(min-width:768px)">
+                                        <img src="/assets/image/face_a_sp.png" alt="お客様の声Aさん">
                                     </picture>
                                     <h3 class="voice__name">Aさん</h3>
                                     <p class="voice__text">
@@ -170,12 +170,13 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- モジュールを追加 -->
+                        <!-- スライダーモジュールを追加 -->
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
+
             </div>
             <!-- お客様の声まで -->
 
