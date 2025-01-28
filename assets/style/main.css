@@ -32,15 +32,6 @@ html {
 /* 変数 -----------------------------------------*/
 :root {
     --pad-lr-sp: 1.6rem;
-    --voice-card-width: 2.8rem;
-    --swiper-theme-color: #00AFBF;
-    --swiper-pagination-bullet-size: 9px;
-}
-
-@media (min-width: 768px) {
-    :root {
-        --voice-card-width: 3rem;
-    }
 }
 
 /* 全体的な設定 -----------------------------------------*/
@@ -60,7 +51,12 @@ body {
     color: #000;
 }
 
-p {
+/* boostrapのcssリセット */
+p,
+dl,
+dd,
+ol,
+ul {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -124,7 +120,7 @@ a {
     font-style: normal;
     font-size: 1.6rem;
     letter-spacing: 0.05em;
-    margin-bottom: 3.7rem;
+    margin-bottom: 3.8rem;
 }
 
 @media (min-width: 768px) {
@@ -255,25 +251,25 @@ a {
     font-size: 4.1rem;
     letter-spacing: 0.3em;
     line-height: 1.244;
+    margin-bottom: 1rem;
 }
 
 @media (min-width:768px) {
     .header__title-main {
         font-size: 5rem;
         line-height: 1.36;
+        margin-bottom: 1rem;
     }
 }
 
 .header__title-sub {
     font-size: 2rem;
     letter-spacing: 0.3em;
-    margin-top: 1rem;
 }
 
 @media (min-width:768px) {
     .header__title-sub {
         font-size: 2.5rem;
-        margin-top: 0.4rem;
     }
 }
 
@@ -510,12 +506,12 @@ a {
 /* お客様の声ここから -----------------------------------------*/
 .voice {
     text-align: center;
-    margin-bottom: 7.2rem;
+    margin-bottom: 7.5rem;
 }
 
 @media (min-width: 768px) {
     .voice {
-        margin-bottom: 8rem;
+        margin-bottom: 11.3rem;
     }
 }
 
@@ -537,6 +533,8 @@ a {
     width: 28rem;
     margin-inline: auto;
     position: relative;
+    --swiper-theme-color: #00AFBF;
+    --swiper-pagination-bullet-size: 9px;
 }
 
 @media (min-width: 768px) {
@@ -548,7 +546,7 @@ a {
 .swiper-slide {
     margin: 0 auto;
     display: flex;
-    padding: 3rem 1.6rem 2.3rem;
+    padding: 3rem 1.5rem 2.4rem;
     background-color: #DBF7F9;
     flex-direction: column;
     align-items: center;
@@ -560,49 +558,58 @@ a {
     }
 }
 
+/* デフォルトの矢印を消す */
 .swiper-button-next:after {
     content: "";
+}
+
+.swiper-button-prev:after {
+    content: "";
+}
+
+/* 次への矢印 */
+.swiper-button-next {
     width: 3.2rem;
     height: 3.2rem;
     background-image: url(../image/circle_arrow_right.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    right: -3.9rem;
+    margin-top: -1.6rem;
 }
 
-.swiper-button-prev:after {
-    content: "";
+@media (min-width: 768px) {
+    .swiper-button-next {
+        width: 4.8rem;
+        height: 4.8rem;
+        right: -8.8rem;
+        margin-top: -2.4rem;
+    }
+}
+
+/* 前への矢印 */
+.swiper-button-prev {
     width: 3.2rem;
     height: 3.2rem;
     background-image: url(../image/circle_arrow_left.svg);
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-/* 次への矢印を外に出す */
-.swiper-button-next {
-    right: -3rem;
-}
-
-@media (min-width: 768px) {
-    .swiper-button-next {
-        right: -7.5rem;
-    }
-}
-
-/* 前への矢印を外に出す */
-.swiper-button-prev {
-    left: -3rem;
+    left: -3.9rem;
+    margin-top: -1.6rem;
 }
 
 @media (min-width: 768px) {
     .swiper-button-prev {
-        left: -7.5rem;
+        width: 4.8rem;
+        height: 4.8rem;
+        left: -8.8rem;
+        margin-top: -2.4rem;
     }
 }
 
-/* ページネーションを外に出す */
+/* ページネーション */
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: -3rem;
+    bottom: -3.3rem;
 }
 
 @media (min-width: 768px) {
@@ -628,7 +635,7 @@ a {
 
 .voice__name {
     font-size: 1.4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.6rem;
 }
 
 @media (min-width: 768px) {
@@ -660,7 +667,7 @@ a {
 
 @media (min-width: 768px) {
     .question {
-        margin-bottom: 4.8rem;
+        margin-bottom: 4.5rem;
     }
 }
 
@@ -673,7 +680,7 @@ a {
 @media (min-width: 768px) {
     .question__container {
         max-width: 120rem;
-        padding: 4rem 30rem;
+        padding: 4.6rem 30rem 4.5rem;
     }
 }
 
@@ -686,7 +693,7 @@ a {
 
 @media (min-width: 768px) {
     .accordion__fxbox {
-        row-gap: 2.6rem;
+        row-gap: 2.4rem;
     }
 }
 
@@ -703,13 +710,13 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 1.5rem var(--pad-lr-sp);
+    padding: 1.8rem var(--pad-lr-sp) 1.3rem;
     cursor: pointer;
 }
 
 @media (min-width: 768px) {
     .accordion__question {
-        padding: 1.7rem 2.4rem;
+        padding: 1.8rem 2.4rem;
     }
 }
 
@@ -806,8 +813,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* フッター全体を中央寄せ */
-    row-gap: 2.9rem;
+    row-gap: 2.6rem;
 }
 
 @media (min-width: 768px) {
@@ -832,13 +838,15 @@ a {
 .footer__navi {
     display: flex;
     justify-content: center;
+    align-items: center;
     column-gap: 3rem;
 }
 
 @media (min-width: 768px) {
     .footer__navi {
-        justify-content: flex-start;
+        justify-content: center;
         column-gap: 3.2rem;
+        padding-left: 5rem;
     }
 }
 
