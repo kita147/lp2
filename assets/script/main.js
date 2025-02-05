@@ -32,7 +32,7 @@ const swiper = new Swiper(".swiper", {
 
 ////////// アコーディオンの設定 //////////
 $(document).ready(function () {
-    $(".accordion-question").on("click", function () {
+    $(".accordion__question").on("click", function () {
         const $answer = $(this).next(".accordion-answer");
         const $toggle = $(this).find(".accordion-toggle");
 
