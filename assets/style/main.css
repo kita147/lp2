@@ -262,7 +262,12 @@ a {
     }
 }
 
+.header__title-one-row {
+    display: block;
+}
+
 .header__title-sub {
+    display: block;
     font-size: 2rem;
     letter-spacing: 0.3em;
 }
