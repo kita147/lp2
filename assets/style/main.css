@@ -663,7 +663,7 @@ a {
     }
 }
 
-.accordion__group {
+.accordion {
     background-color: #fff;
     text-align: left;
 }
@@ -734,7 +734,7 @@ a {
     /* アコーディオンの中身を非表示 */
 }
 
-.accordion__answer--box {
+.accordion__answer-box {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -742,7 +742,7 @@ a {
 }
 
 @media (min-width: 768px) {
-    .accordion__answer--box {
+    .accordion__answer-box {
         padding: 0 2.4rem 2.4rem;
     }
 }
