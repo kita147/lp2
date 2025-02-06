@@ -130,50 +130,6 @@ a {
     }
 }
 
-/* フォント共通クラス（デフォルトはNoto-Serif-JP-Regular400です） -----------------------------------------*/
-.font__noto-serif-jp--medium {
-    font-family: "Noto Serif JP", serif;
-    font-weight: 500;
-    font-style: normal;
-
-}
-
-.font__noto-serif-jp--semi-bold {
-    font-family: "Noto Serif JP", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.font__marcellus--regular {
-    font-family: "Marcellus", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.font__eb-garamond--regular {
-    font-family: "EB Garamond", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.font__eb-garamond--medium {
-    font-family: "EB Garamond", serif;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.font__eb-garamond--semi-bold {
-    font-family: "EB Garamond", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.font__eb-garamond--bold {
-    font-family: "EB Garamond", serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
 /* ヘッダーここから -----------------------------------------*/
 .header {
     width: 100%;
@@ -235,6 +191,9 @@ a {
 }
 
 .header__title-main {
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 4.1rem;
     letter-spacing: 0.3em;
     line-height: 1.244;
@@ -315,6 +274,9 @@ a {
 }
 
 .price__title--main {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 1.8rem;
     letter-spacing: 0.1em;
     line-height: 1.4444;
@@ -466,6 +428,9 @@ a {
 }
 
 .beautiful-skin__titile--en {
+    font-family: "EB Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 3rem;
     margin-bottom: 1.5rem;
 }
@@ -478,6 +443,9 @@ a {
 }
 
 .beautiful-skin__titile--jp {
+    font-family: "EB Garamond", serif;
+    font-weight: 600;
+    font-style: normal;
     display: block;
     font-size: 2.4rem;
     margin-bottom: 1.5rem;
