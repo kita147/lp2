@@ -62,36 +62,15 @@ $(document).ready(function () {
     });
 });
 
-////////// ページトップに戻るボタン //////////
+////////// トップに戻るボタンのスクロール位置が200pxを超えたらフェードインする //////////
 $(document).ready(function () {
     const $backToTop = $(".btn__back-to-top");
-    const $footer = $(".footer");
-    const defaultBottom = 20;
 
-    // スクロール位置で表示制御とフッター調整
     $(window).on("scroll", function () {
-        const scrollTop = $(this).scrollTop();
-        const footerTop = $footer.offset().top;
-        const windowHeight = $(window).height();
-
-        // ボタンの表示と非表示
-        if (scrollTop > 200) {
-        $backToTop.addClass("show");
+        if ($(this).scrollTop() > 200) {
+            $backToTop.addClass("show");
         } else {
-        $backToTop.removeClass("show");
+            $backToTop.removeClass("show");
         }
-
-    // フッターに近づいた場合の位置調整
-    const overlap = scrollTop + windowHeight - footerTop;
-    if (overlap > 0) {
-        $backToTop.css({ bottom: overlap + "px" });
-    } else {
-        $backToTop.css({ bottom: defaultBottom + "px" });
-    }
-    });
-
-    // ボタンをクリックしてトップに戻る
-    $backToTop.on("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });

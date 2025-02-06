@@ -27,6 +27,7 @@ html {
 /* スムーススクロール -----------------------------------------*/
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
 }
 
 /* 変数 -----------------------------------------*/
@@ -492,7 +493,6 @@ a {
 
 /* スライダーの設定ここから --------------------*/
 .swiper__container {
-    /*position: relative;*/
     width: 28rem;
     margin-inline: auto;
     --swiper-theme-color: #00AFBF;
@@ -539,6 +539,7 @@ a {
     background-repeat: no-repeat;
     top: 27.5rem;
     left: 34.2rem;
+    z-index: 100;
 }
 
 @media (min-width: 768px) {
@@ -560,6 +561,7 @@ a {
     background-repeat: no-repeat;
     top: 27.5rem;
     left: 1.6rem;
+    z-index: 99;
 }
 
 @media (min-width: 768px) {
@@ -745,8 +747,66 @@ a {
     }
 }
 
-
 /* 質問ここまで -----------------------------------------*/
+
+/* TOPへ戻るここから------------------------------------*/
+.btn__container {
+    max-width: 39rem;
+    margin: 0  auto;
+    padding: 0 1.6rem;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    left: 0;
+    bottom: 5rem;
+    z-index: 1000;
+}
+
+@media (min-width: 768px) {
+    .btn__container {
+        max-width: 120rem;
+        padding: 0 15rem;
+    }
+}
+
+.btn__back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    background-color: #0071CE;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease, background-color 0.5s ease, border 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .btn__back-to-top {
+        right: 15rem;
+    }
+}
+
+/* ボタン表示 */
+.btn__back-to-top.show {
+    opacity: 1;
+}
+
+.btn__back-to-top:hover {
+    color: #0071CE;
+    background-color: #fff;
+    border: 2px solid #0071CE;
+}
+
+.icon-middle {
+    font-size: 3rem;
+    line-height: 1;
+    /* アイコンの上下余白をリセット */
+    display: inline-block;
+    vertical-align: middle;
+}
+/* TOPへ戻るここまで------------------------------------*/
 
 /* フッターここから------------------------------------*/
 .footer {
@@ -833,47 +893,3 @@ a {
 }
 
 /* フッターここまで------------------------------------*/
-
-/* TOPへ戻るここから------------------------------------*/
-.btn__back-to-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: 2rem;
-    right: 1.6rem;
-    width: 4rem;
-    height: 4rem;
-    color: #fff;
-    background-color: #0071CE;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.5s ease, background-color 0.5s ease, border 0.3s ease;
-    z-index: 1000;
-}
-
-@media (min-width: 768px) {
-    .btn__back-to-top {
-        right: 15rem;
-    }
-}
-
-.btn__back-to-top.show {
-    opacity: 1;
-}
-
-.btn__back-to-top:hover {
-    color: #0071CE;
-    background-color: #fff;
-    border: 2px solid #0071CE;
-}
-
-.icon-middle {
-    font-size: 3rem;
-    line-height: 1;
-    /* アイコンの上下余白をリセット */
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* TOPへ戻るここまで------------------------------------*/
