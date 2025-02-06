@@ -153,7 +153,7 @@ a {
 .header__container {
     max-width: 39rem;
     margin: 0 auto;
-    padding: 2.4rem 2.3rem;
+    padding: 2rem 2.3rem;
 }
 
 @media (min-width:768px) {
@@ -169,7 +169,7 @@ a {
 }
 
 .header__logo {
-    width: 14.3rem;
+    width: 14rem;
 }
 
 @media (min-width:768px) {
@@ -182,7 +182,7 @@ a {
 .header__box--title {
     display: flex;
     flex-direction: column;
-    margin-top: 36.4rem;
+    margin-top: 37rem;
 }
 
 @media (min-width:768px) {
@@ -217,11 +217,13 @@ a {
     display: block;
     font-size: 2rem;
     letter-spacing: 0.3em;
+    margin-top: 1.3rem;
 }
 
 @media (min-width:768px) {
     .header__title-sub {
         font-size: 2.5rem;
+        margin-top: 0;
     }
 }
 
@@ -433,13 +435,11 @@ a {
     font-weight: 700;
     font-style: normal;
     font-size: 3rem;
-    margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
     .beautiful-skin__titile--en {
         font-size: 3.8rem;
-        margin-bottom: 1.4rem;
     }
 }
 
@@ -449,12 +449,12 @@ a {
     font-style: normal;
     display: block;
     font-size: 2.4rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 @media (min-width: 768px) {
     .beautiful-skin__titile--jp {
-        margin-bottom: 2rem;
+        margin-top: 2rem;
     }
 
 }
@@ -463,6 +463,13 @@ a {
     font-size: 1.4rem;
     line-height: 2.28;
     text-align: left;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .beautiful-skin__text {
+        margin-top: 2.4rem;
+    }
 }
 
 /* お客様の声ここから -----------------------------------------*/
