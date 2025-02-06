@@ -175,7 +175,7 @@ a {
 @media (min-width:768px) {
     .header__logo {
         display: block;
-        width: 16.6rem;
+        width: 16.2rem;
     }
 }
 
@@ -187,7 +187,7 @@ a {
 
 @media (min-width:768px) {
     .header__box--title {
-        margin-top: 20.3rem;
+        margin-top: 21rem;
     }
 }
 
@@ -205,7 +205,7 @@ a {
     .header__title-main {
         font-size: 5rem;
         line-height: 1.36;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
     }
 }
 
@@ -223,7 +223,7 @@ a {
 @media (min-width:768px) {
     .header__title-sub {
         font-size: 2.5rem;
-        margin-top: 0;
+        margin-top: 1.1rem;
     }
 }
 
@@ -454,7 +454,7 @@ a {
 
 @media (min-width: 768px) {
     .beautiful-skin__titile--jp {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
     }
 
 }
@@ -468,7 +468,7 @@ a {
 
 @media (min-width: 768px) {
     .beautiful-skin__text {
-        margin-top: 2.4rem;
+        margin-top: 2rem;
     }
 }
 
@@ -602,20 +602,19 @@ a {
     .voice__picture {
         width: 10rem;
         height: 10rem;
-        margin-bottom: 0.7em;
+        margin: 0 0 0.6rem 0rem;
     }
 }
 
 .voice__name {
     font-size: 1.4rem;
     padding-left: 0.2rem;
-    margin-bottom: 1.3rem;
 }
 
 @media (min-width: 768px) {
     .voice__name {
         font-size: 1.5rem;
-        margin-bottom: 1.4rem;
+        padding-left: 0;
     }
 }
 
@@ -623,12 +622,14 @@ a {
     font-size: 1.4rem;
     line-height: 2;
     text-align: left;
+    margin-top: 1.3rem;
 }
 
 @media (min-width: 768px) {
     .voice__text {
         font-size: 1.6rem;
         line-height: 1.75;
+        margin-top: 1.1rem;
     }
 }
 
