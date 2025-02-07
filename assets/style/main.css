@@ -128,7 +128,7 @@ a {
 @media (min-width: 768px) {
     .section-title--jp {
         font-size: 2rem;
-        margin-bottom: 4.1rem;
+        margin-bottom: 4.2rem;
     }
 }
 
@@ -232,17 +232,6 @@ a {
 
 
 /* 価格とボタン2個（共用）ここから -----------------------------------------*/
-.price {
-    margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
-    .price {
-        margin-bottom: 4.8rem;
-    }
-
-}
-
 .price__container {
     max-width: 39rem;
     margin: 0 auto;
@@ -398,7 +387,7 @@ a {
         height: 55rem;
         background-image: url(/assets/image/photo_keep_pc.jpg);
         margin-bottom: 8.7rem;
-        margin: 5rem 0 8.7rem;
+        margin: 4.8rem 0 8.7rem;
     }
 }
 
@@ -642,7 +631,7 @@ a {
 
 @media (min-width: 768px) {
     .question {
-        margin-bottom: 4.5rem;
+        margin-bottom: 4.7rem;
     }
 }
 
@@ -655,7 +644,7 @@ a {
 @media (min-width: 768px) {
     .question__container {
         max-width: 120rem;
-        padding: 4.6rem 30rem 4.5rem;
+        padding: 4.6rem 30rem 4.2rem;
     }
 }
 
@@ -687,7 +676,7 @@ a {
 
 @media (min-width: 768px) {
     .accordion__question {
-        padding: 1.8rem 2.4rem;
+        padding: 2rem 2.4rem 1.5rem;
     }
 }
 
@@ -711,6 +700,7 @@ a {
 @media (min-width: 768px) {
     .accordion__label {
         font-size: 1.8rem;
+        margin-right: 1.7rem;
     }
 }
 
@@ -725,6 +715,7 @@ a {
 @media (min-width: 768px) {
     .accordion__text {
         width: 51rem;
+        margin-top: 0.3rem;
     }
 }
 
@@ -743,6 +734,12 @@ a {
     /* アコーディオンの中身を非表示 */
 }
 
+@media (min-width: 768px) {
+    .accordion__answer {
+        margin-top: -0.5rem;
+    }
+}
+
 .accordion__answer-box {
     display: flex;
     justify-content: flex-start;
@@ -752,7 +749,7 @@ a {
 
 @media (min-width: 768px) {
     .accordion__answer-box {
-        padding: 0 2.4rem 2.4rem;
+        padding: 0 2.4rem 2rem;
     }
 }
 
@@ -774,7 +771,7 @@ a {
 @media (min-width: 768px) {
     .btn__container {
         max-width: 120rem;
-        padding: 0.9rem 15rem 0;
+        padding: 0.8rem 0 0;
     }
 }
 
@@ -834,7 +831,7 @@ a {
     .footer__container {
         max-width: 120rem;
         height: 10.4rem;
-        padding: 4rem 3.2rem;
+        padding: 3.5rem 3.2rem;
     }
 }
 
@@ -849,8 +846,6 @@ a {
     .footer__box {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        column-gap: 3.2rem;
     }
 }
 
@@ -876,7 +871,8 @@ a {
     .footer__navi {
         justify-content: center;
         column-gap: 3.2rem;
-        padding-left: 5rem;
+        padding-top: 0.5rem;
+        margin-left: 5rem;
     }
 }
 
@@ -899,6 +895,7 @@ a {
 @media (min-width: 768px) {
     .footer__copy {
         font-size: 1.2rem;
+        padding-top: 0.8rem;
     }
 }
 
