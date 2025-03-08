@@ -2,7 +2,7 @@
 
 ////////// swiperの設定 //////////
 const swiper = new Swiper(".swiper", {
-    oop: true,
+    loop: false,
 
     // スライド数の設定
     slidesPerView: 1,
