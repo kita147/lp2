@@ -488,7 +488,7 @@ a {
 @media (min-width: 768px) {
     .voice__container {
         max-width: 120rem;
-        padding: 0;
+        padding: 0 2.2rem;
     }
 }
 
@@ -503,7 +503,7 @@ a {
 
 @media (min-width: 768px) {
     .swiper__container {
-        width: 81.6%;
+        width: 98rem;
     }
 }
 
@@ -539,8 +539,8 @@ a {
     background-image: url(../image/circle_arrow_right.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    top: 27.5rem;
-    right: 34.2rem;
+    top: 17.8rem;
+    right: -4rem;
     z-index: 100;
 }
 
@@ -561,8 +561,8 @@ a {
     background-image: url(../image/circle_arrow_left.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    top: 27.5rem;
-    left: 1.6rem;
+    top: 17.8rem;
+    left: -4rem;
     z-index: 99;
 }
 
