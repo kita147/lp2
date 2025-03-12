@@ -30,6 +30,12 @@ html {
     scroll-padding-top: 10rem;
 }
 
+/* 縦スクロールバーを表示 */
+html,
+body {
+    overflow-y: scroll;
+}
+
 /* 変数 -----------------------------------------*/
 :root {
     --pad-lr-sp: 1.6rem;
@@ -247,7 +253,7 @@ a {
 
 .price__box {
     width: 100%;
-    padding: 2.1rem 10rem 3.4rem;
+    padding: 2.1rem 1rem 3.4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -474,7 +480,6 @@ a {
 }
 
 .voice__container {
-    position: relative;
     max-width: 39rem;
     margin: 0 auto;
     padding: 0 var(--pad-lr-sp);
@@ -489,6 +494,7 @@ a {
 
 /* スライダーの設定ここから --------------------*/
 .swiper__container {
+    position: relative;
     width: 28rem;
     margin-inline: auto;
     --swiper-theme-color: #00AFBF;
@@ -497,7 +503,7 @@ a {
 
 @media (min-width: 768px) {
     .swiper__container {
-        width: 98rem;
+        width: 81.6%;
     }
 }
 
@@ -534,7 +540,7 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     top: 27.5rem;
-    left: 34.2rem;
+    right: 34.2rem;
     z-index: 100;
 }
 
@@ -542,8 +548,8 @@ a {
     .swiper-button-next {
         width: 4.8rem;
         height: 4.8rem;
-        top: 32rem;
-        left: 113rem;
+        top: 19.2rem;
+        right: -8.8rem;
     }
 }
 
@@ -564,8 +570,8 @@ a {
     .swiper-button-prev {
         width: 4.8rem;
         height: 4.8rem;
-        top: 32rem;
-        left: 2.2rem;
+        top: 19.2rem;
+        left: -8.8rem;
     }
 }
 
@@ -576,7 +582,7 @@ a {
 
 @media (min-width: 768px) {
     .swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: -4.2rem;
+        bottom: -4rem;
     }
 }
 
@@ -758,7 +764,7 @@ a {
 /* TOPへ戻るここから------------------------------------*/
 .btn__container {
     max-width: 39rem;
-    margin: 0  auto;
+    margin: 0 auto;
     padding: 0.9rem 1.6rem 0;
     display: flex;
     justify-content: flex-end;
@@ -812,6 +818,7 @@ a {
     display: inline-block;
     vertical-align: middle;
 }
+
 /* TOPへ戻るここまで------------------------------------*/
 
 /* フッターここから------------------------------------*/
